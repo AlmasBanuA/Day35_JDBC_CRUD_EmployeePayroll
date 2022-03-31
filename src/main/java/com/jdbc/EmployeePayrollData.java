@@ -3,7 +3,7 @@ package com.jdbc;
 import java.time.LocalDate;
 
 public class EmployeePayrollData {
-
+	
 	/**
 	 * Declaring variables
 	 */
@@ -14,7 +14,6 @@ public class EmployeePayrollData {
 
 	/**
 	 * creating parameterized constructor of EmployeePayrollData
-	 * 
 	 * @param id
 	 * @param name
 	 * @param salary
@@ -27,7 +26,6 @@ public class EmployeePayrollData {
 
 	/**
 	 * creating parameterized constructor of EmployeePayrollData
-	 * 
 	 * @param id
 	 * @param name
 	 * @param salary
