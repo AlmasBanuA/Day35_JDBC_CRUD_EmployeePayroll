@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import com.jdbc.EmployeePayrollDBService.StatementType;
 import com.jdbc.EmployeePayrollException.ExceptionType;
+import java.util.Map;
 
 public class EmployeePayrollService {
 	public enum IOService {
@@ -143,5 +144,17 @@ public class EmployeePayrollService {
 		List<EmployeePayrollData> employeesInGivenDateRangeList = employeePayrollDBService
 				.getEmployeesInGivenDateRangeDB(date1, date2);
 		return employeesInGivenDateRangeList;
+	}
+
+	/**
+	 * read the Average Salary group ByGender using Hashmap
+	 * 
+	 * @param ioService
+	 * @return
+	 */
+	public Map<String, Double> readAverageSalaryByGender(IOService ioService) {
+		if (ioService.equals(IOService.DB_IO))
+			return employeePayrollDBService.getAverageSalaryByGender();
+		return null;
 	}
 }
